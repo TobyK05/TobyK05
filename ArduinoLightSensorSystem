@@ -1,0 +1,68 @@
+// Lab 4 level 1 Tk Feb 4, 2026
+//
+
+//digital output pins 
+int lightPin = A1; //The light sensor is plugged into pin A1 of the Arduino.
+int data = 0; //This will store the data from the sensor.
+int redLED=12;
+int blueLED=13;
+int greenLED=8;
+
+
+void setup() 
+{ //The Setup function runs once.
+  pinMode(lightPin, INPUT);
+  pinMode(redLED, OUTPUT);
+  pinMode(blueLED, OUTPUT);
+  pinMode(greenLED, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() { //The loop function runs forever.
+
+  data = analogRead(lightPin);
+  data = map(data, 6, 679, 0, 100);
+
+
+  Serial.print("Mapped value =");
+
+  Serial.println(data); 
+  
+  //if/else statments to ensure the code runs as specified
+  
+  if (data > 50) { 
+    digitalWrite(redLED, HIGH);     
+  } else {
+       digitalWrite(redLED, LOW);
+  }
+  
+ 
+  
+  if (data >= 30 && data <= 60) {
+     digitalWrite(blueLED, HIGH);
+  } else {
+      digitalWrite(blueLED, LOW);
+  }
+    
+    
+  
+   if (data < 33) {
+
+    digitalWrite(greenLED, HIGH);
+    delay(1000);
+    digitalWrite(greenLED, LOW);
+    delay(1000);
+} 
+  else if (data > 66){
+    digitalWrite(greenLED, HIGH);
+    delay(250);
+    digitalWrite(greenLED, LOW);
+    delay(250);
+  }
+  else {
+    digitalWrite(greenLED, LOW);
+  }
+
+
+}
+  

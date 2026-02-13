@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+  <meta charset="UTF-8">
+  <title>Lab1 Basic registration form</title>
+<!--Title of the webdocument, visible in the url.--> 
+<style>
+  body {
+   display: flex;
+   justify-content: center;
+   align-items: center;    
+   min-height: 100vh;      
+   background-color: #f0f0f0;
+   font-family: Arial, sans-serif;
+   margin: 0;
+ }
+
+
+  form {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+   padding: 40px;
+   background-color: white;
+   border-radius: 12px;
+   width: 720px;
+   box-shadow: none;
+   text-align: center;
+ }
+
+
+  form h1 {
+   margin: 0;
+   margin-bottom: 10px;
+   font-size: 32px;
+ }
+
+
+ form p {
+   margin: 0;
+   margin-bottom: 20px;
+   color: #555;
+ }
+
+
+ label {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   text-align: left;
+ }
+
+
+ input[type="text"],
+ input[type="email"],
+ input[type="password"],
+ input[type="date"],
+ select {
+   padding: 8px;
+   width: 100%;
+   box-sizing: border-box;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+ }
+
+
+ input[type="radio"] {
+   margin-right: 5px;
+ }
+
+
+ button {
+   margin-top: 15px;
+   padding: 12px;
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+ }
+
+
+ button:hover {
+   background-color: #45a049;
+ }
+
+
+</style>
+<!-- css code above which sylizes the form to my liking. I chose to keep it simple using only white -->
+
+
+</head>
+   <body>
+ 
+ 
+       <form>   
+ 
+ 
+   <header>
+      <h1>User registration form</h1>
+  <p>Fill out all required fields below.</p>
+    </header>
+<!--Title and subtitle of the form.-->
+  
+
+
+  
+<label for="fullname">Full Name:</label>
+<input type="text" id="fullname" name="fullname" required>
+
+
+
+
+<label for="lastname">Last Name:</label>
+<input type="text" id="lastname" name="lastname" required>
+
+
+
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+ <label for="password">Password:</label>
+<input type="password" id="password" name="password" required>
+
+
+<label for ="confirmpassword">Confirm Password:</label>
+<input type="password" id="confirmpassword" name="confirmpassword" required>
+
+
+
+
+<label for="dob">Date of Birth:</label>
+<input type="text" id="dob" name="dob" placeholder="YYYY-MM-DD" required>
+
+
+
+
+<label>
+   <input type="radio" name="gender" value="male">
+   Male
+ </label>
+
+
+ <label>
+   <input type="radio" name="gender" value="female">
+   Female
+ </label>
+
+
+ <label>
+   <input type="radio" name="gender" value="other">
+   Other
+ </label>
+
+
+
+
+ <label for="country">Country of Origin:</label>
+
+
+ <select id="country" name="country">
+    <option value="">--Please choose--</option>
+ <option value="us">United States</option>
+ <option value="ca">Canada</option>
+ <option value="uk">United Kingdom</option>
+ <option value="au">Australia</option>
+ <option value="in">India</option>
+ <option value="other">Other</option>
+
+
+</select>
+
+
+<label>Preferences:</label>
+
+
+<label>
+ <input type="radio" name="terms" value="agree">
+ Agree to Terms and Conditions
+</label>
+<label>
+ <input type="radio" name="newsletter" value="subscribe">
+ Subscribe to Newsletter
+</label>
+
+
+<button type="submit">Register</button>
+<!--All of the input fields as well as the submit button for the form.-->
+
+
+
+
+
+
+</form>
+
+
+
+
+</body>
+   </html>
